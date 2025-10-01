@@ -26,25 +26,25 @@ Questions are categorized, and each question has multiple-choice options (A, B, 
 ## Setup and Run Locally
 
 ### Prerequisites
-- Java 17+
+- Java 21+
 - Maven
 - MySQL 
 
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Shreyasp-2004/quiz_backend
    cd quiz-app
 
 2. If using Mysql copy this dependency and replace with postgre's in pom.xml
    ```bash
-    <dependency>
+        <dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 
-3. Create a database
+3. Create a database in PgAdmin or Mysql Woekbench
    ```bash
       CREATE DATABASE quiz;
    
@@ -56,7 +56,8 @@ Questions are categorized, and each question has multiple-choice options (A, B, 
      spring.datasource.password=your_password
 3. Build the project
     ```bash
-     mvn clean install
+     mvn spring-boot:run
+
 3. Access the API:
     ```bash
     Base URL: http://localhost:8080/
